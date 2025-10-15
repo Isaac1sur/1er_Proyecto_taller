@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  animation: timeCycle 40s linear infinite; 
+  transition: background 2s ease-in-out;
+}
+
+
+@keyframes timeCycle {
+  0% {
+    background: linear-gradient(to bottom, #87ceeb, #b0e0e6);
+  }
+  25% {
+    background: linear-gradient(to bottom, #ffb347, #ffcc33); 
+  }
+  40% {
+    background: linear-gradient(to bottom, #7d3c98, #2c3e50); 
+  }
+  60%, 80% {
+    background: linear-gradient(to bottom, #0f0f38, #36366b); 
+  }
+  90% {
+    background: linear-gradient(to bottom, #f39c12, #e67e22); 
+  }
+  100% {
+    background: linear-gradient(to bottom, #87ceeb, #b0e0e6); 
+  }
+}
+
+
+.sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 60%;
+  left: 110%;
+  opacity: 1;
+  background: radial-gradient(circle, #fff97a 0%, #ffec00 70%);
+  box-shadow: 0 0 30px rgba(255, 230, 0, 0.8);
+  animation: sunMove 40s linear infinite;
+}
+
+
+@keyframes sunMove {
+  0% {
+    top: 60%;
+    left: 110%;
+    opacity: 1;
+    background: radial-gradient(circle, #fff97a, #ffec00);
+  }
+  10% {
+    top: 30%;
+    left: 70%;
+  }
+  20% {
+    top: 15%;
+    left: 50%;
+    background: radial-gradient(circle, #fff97a, #ffd000);
+  }
+  35% {
+    top: 30%;
+    left: 20%;
+  }
+  40% {
+    top: 60%;
+    left: -10%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.moon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 60%;
+  left: 110%;
+  opacity: 0;
+  background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  animation: moonMove 40s linear infinite;
+}
+
+
+@keyframes moonMove {
+  0%, 45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+    top: 60%;
+    left: 110%;
+    background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+  }
+  65% {
+    top: 30%;
+    left: 70%;
+  }
+  75% {
+    top: 15%;
+    left: 50%;
+    background: radial-gradient(circle at 30% 30%, #e0e0ff, #b0b0cc); /* 🔧 Luna más azulada */
+  }
+  85% {
+    top: 30%;
+    left: 20%;
+  }
+  90% {
+    top: 60%;
+    left: -10%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 20% 70%, rgba(255,255,255,0.8) 1px, transparent 1px),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.8) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8) 1px, transparent 1px),
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.7) 1px, transparent 1px),
+    radial-gradient(circle at 90% 80%, rgba(255,255,255,0.9) 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0;
+  animation: starsFade 40s linear infinite;
+}
+
+
+@keyframes starsFade {
+  0%, 45% { opacity: 0; }
+  55%, 85% { opacity: 1; }
+  90%, 100% { opacity: 0; }
+}

@@ -1,0 +1,85 @@
+/* Fondo del cielo */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #b5ced8, #b0e0e6);
+  height: 100vh;
+}
+
+
+
+.cloud {
+  position: absolute;
+  background: linear-gradient(to top, #bec1c4, #e5e5eb, #f7f9fa);
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow:
+    60px 0px 0 20px #e7eff3, 
+    30px -20px 0 15px #e2e9f3,
+    30px 20px 0 15px #fff;
+  width: 120px;
+  height: 60px;
+  animation: move-cloud 15s linear infinite;
+}
+
+
+.cloud1 {
+  right: -200px;  
+  top: 100px;
+  animation-delay: 0s;
+  z-index: 2;
+}
+
+.cloud2 {
+  right: -250px;
+  top: 180px;
+  width: 150px;
+  height: 70px;
+  animation-delay: 2s;
+   z-index: 2;
+}
+
+.cloud3 {
+  right: -180px;
+  top: 200px;
+  width: 100px;
+  height: 50px;
+  animation-delay: 4s;
+   z-index: 2;
+}
+
+.cloud4 {
+  right: -220px;
+  top: 130px;
+  width: 130px;
+  height: 65px;
+  animation-delay: 6s;
+   z-index: 2;
+}
+
+.cloud5 {
+  right: -300px;
+  top: 160px;
+  width: 180px;
+  height: 90px;
+  animation-delay: 7s;
+   z-index: 2;
+}
+
+@keyframes move-cloud {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+
+}

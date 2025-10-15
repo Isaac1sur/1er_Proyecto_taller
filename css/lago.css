@@ -1,0 +1,8 @@
+.lago {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 200px;
+  background: linear-gradient(to top, #49a9f7, #6953e6, #75f17f);
+  
+}
